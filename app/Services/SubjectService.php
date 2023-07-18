@@ -20,9 +20,9 @@ class SubjectService
     /**
      * Создает новый предмет или возвращает существующий.
      *
-     * @param SubjectCreateDto $dto объект DTO, содержащий информацию о предмете
+     * @param SubjectCreateDto $dto Объект DTO, содержащий информацию о предмете
      *
-     * @return Subject возвращает созданный или существующий предмет
+     * @return Subject Возвращает созданный или существующий предмет
      */
     public function createOrGet(SubjectCreateDto $dto): Subject
     {

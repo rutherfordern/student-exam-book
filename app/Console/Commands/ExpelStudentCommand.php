@@ -32,7 +32,6 @@ class ExpelStudentCommand extends Command
             $this->error("Студент {$name} не найден");
         } else {
             $this->info("Студент {$name} и его результаты экзаменов успешно удалены");
-            Log::channel('console')->info('Студент {name} и его результаты экзаменов удалены', ['name' => $name]);
         }
     }
 }

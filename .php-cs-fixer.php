@@ -17,6 +17,7 @@ return $config->setRules([
     'no_unused_imports' => true,
     'declare_strict_types' => true,
     'method_argument_space' => ['on_multiline' => 'ensure_fully_multiline'],
+    'phpdoc_annotation_without_dot' => false,
 ])
     ->setRiskyAllowed(true)
     ->setFinder($finder);

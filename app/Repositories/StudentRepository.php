@@ -14,7 +14,7 @@ class StudentRepository
      *
      * @param Student $id id студента
      *
-     * @return Student|null возвращает объект студента или null, если студент не найден
+     * @return Student|null Возвращает объект студента или null, если студент не найден
      */
     public function getById(Student $id): ?Student
     {
@@ -24,9 +24,9 @@ class StudentRepository
     /**
      * Возвращает студента по его имени.
      *
-     * @param string $name имя студента
+     * @param string $name Имя студента
      *
-     * @return Student|null возвращает объект студента или null, если студент не найден
+     * @return Student|null Возвращает объект студента или null, если студент не найден
      */
     public function getByName(string $name): ?Student
     {
@@ -36,7 +36,7 @@ class StudentRepository
     /**
      * Возвращает студентов с двумя или более двойками.
      *
-     * @return array массив студентов с двумя или более двойками
+     * @return array Массив студентов с двумя или более двойками
      */
     public function getStudentsWithTwoOrMoreFailures(): array
     {

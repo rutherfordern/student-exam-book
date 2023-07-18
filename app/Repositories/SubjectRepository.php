@@ -11,9 +11,9 @@ class SubjectRepository
     /**
      * Возвращает предмет по его названию.
      *
-     * @param Subject $id id предмета
+     * @param Subject $id Id предмета
      *
-     * @return Subject|null возвращает объект предмета или null, если предмет не найден
+     * @return Subject|null Возвращает объект предмета или null, если предмет не найден
      */
     public function getById(Subject $id): ?Subject
     {
@@ -23,9 +23,9 @@ class SubjectRepository
     /**
      * Возвращает предмет по его названию.
      *
-     * @param string $name название предмета
+     * @param string $name Название предмета
      *
-     * @return Subject|null возвращает объект предмета или null, если предмет не найден
+     * @return Subject|null Возвращает объект предмета или null, если предмет не найден
      */
     public function getByName(string $name): ?Subject
     {

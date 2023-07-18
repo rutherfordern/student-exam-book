@@ -20,6 +20,13 @@ class ScoreService
         $this->cacheRepository = $cacheRepository;
     }
 
+    /**
+     * Создает или обновляет оценку на основе объекта DTO.
+     *
+     * @param ScoreCreateDto $dto Объект DTO, содержащий информацию об оценке
+     *
+     * @return void
+     */
     public function createOrUpdate(ScoreCreateDto $dto): void
     {
         $existingScore = Score::where('student_id', $dto->getStudentId())
@@ -43,9 +50,9 @@ class ScoreService
     /**
      * Рассчитывает средний балл по указанному предмету.
      *
-     * @param string $subjectName название предмета
+     * @param string $subjectName Название предмета
      *
-     * @return float|null средний балл по предмету или null, если предмета не существует
+     * @return float|null Средний бал по предмету или null, если предмета не существует
      */
     public function calculateAverageScoreBySubject(string $subjectName): float|null
     {

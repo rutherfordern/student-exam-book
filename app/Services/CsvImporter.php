@@ -7,6 +7,7 @@ namespace App\Services;
 use App\Services\DTO\ScoreCreateDto;
 use App\Services\DTO\StudentCreateDto;
 use App\Services\DTO\SubjectCreateDto;
+use Exception;
 use Psr\Log\LoggerInterface;
 
 class CsvImporter implements ImporterInterface
@@ -31,6 +32,15 @@ class CsvImporter implements ImporterInterface
         $this->logger = $logger;
     }
 
+    /**
+     * Импортирует данные из CSV-файла и создает записи о студентах, предметах и оценках.
+     *
+     * @param string $filePath Путь к CSV-файлу
+     *
+     * @return void
+     *
+     * @throws Exception
+     */
     public function import(string $filePath): void
     {
         $records = $this->fileDataReader->read($filePath);

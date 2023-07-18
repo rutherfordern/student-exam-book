@@ -32,7 +32,6 @@ class CalculateAverageScoreCommand extends Command
             $this->error("Предмет {$subject} не найден");
         } else {
             $this->info("Средний бал всех студентов по предмету {$subject}: {$averageScore}");
-            Log::channel('console')->info('Команда avg:scores {subject} выполнена успешно', ['subject' => $subject]);
         }
     }
 }

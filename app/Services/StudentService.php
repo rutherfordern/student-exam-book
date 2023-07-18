@@ -43,6 +43,8 @@ class StudentService
      * Удаляет студента из БД вместе с его результатами или возвращает null если студент не найден.
      *
      * @param string $name Имя студента
+     *
+     * @return bool|null Возвращает true, если студент и его оценки успешно удалены. Возвращает null, если студент не найден.
      */
     public function deleteStudentWithScores(string $name): ?bool
     {
