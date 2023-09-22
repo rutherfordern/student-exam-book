@@ -12,7 +12,7 @@ make docker-migrate
 ```
 
 ## Импорт студентов
-В проекте уже есть три файла со списком студентов. По желанию можно добваить свои файлы или загрузить несколько готовых.
+В проекте уже есть несколько файлов со списком студентов. 
 ```sh
 docker-compose exec app php artisan import:file storage/tmp/students.csv
 docker-compose exec app php artisan import:file storage/tmp/students_new.csv
@@ -25,6 +25,14 @@ docker-compose exec app php artisan import:file storage/tmp/students_new.csv
 ```sh
 docker-compose exec app php artisan avg:scores Физика
 docker-compose exec app php artisan avg:scores 'Дискретная математика'
+```
+### Оценки по определенному предмету
+```sh
+docker-compose exec app php artisan scores Химия
+```
+### Таблица студентов с двумя и более двойками
+```sh
+docker-compose exec app php artisan student:explusion:list
 ```
 ### Удаление студента
 При удалении студента ФИО нужно указывать в кавычках.
