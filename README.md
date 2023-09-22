@@ -21,7 +21,6 @@ docker-compose exec app php artisan import:file storage/tmp/students_new.csv
 ## Команды
 
 ### Средний бал по предмету
-Если загружены готовые файлы со студентами, то средний бал по предмету можно посмотреть так:
 ```sh
 docker-compose exec app php artisan avg:scores Физика
 docker-compose exec app php artisan avg:scores 'Дискретная математика'
